@@ -23,4 +23,14 @@ Rot47 Decryptor - Copyright (c) @ BornToBeRoot
  - User: https://github.com/BornToBeRoot
  - Link: https://github.com/BornToBeRoot/PowerShell
 
+# Side note
+
+Please excuse anything unprofessional since this is a side project.
+The main use case is for Cyberpatriot.
+I may use it at a job if the job has anything to do with cryptology and cryptograms. 
+If that is the case, I will pay attention to every detail.
+
+
 # Copyright (c) 2021 @ Byrch Baker
+(In most parts)
+
