@@ -1576,6 +1576,23 @@ Vigenere_Cipher
 $ErrorActionPreference = "SilentlyContinue"
 $plaintext = All_Cipher
 
+# Auto Solve functionality 
+
+$plaintext | ForEach-Object {
+$isEnglish = $null
+$_.split(" ") | Foreach {
+if ($englishDictionary -match $_) {
+$isEnglish += "True`n" 
+} else {
+$isEnglish += "False`n"
+}
+}
+if ($isEnglish -notmatch "False") {
+$_
+break
+} 
+}
+
 
 <#
 
