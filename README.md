@@ -16,11 +16,11 @@ An Auto Deciphering script is coming soon. This script will give anyone the abil
 # Credits
 
 Vigenere Cipher - Copyright (c) @ StackCrash 
-User: https://github.com/StackCrash
-Link: https://github.com/StackCrash/PoshCiphers/tree/master/PoshCiphers
+ - User: https://github.com/StackCrash
+ - Link: https://github.com/StackCrash/PoshCiphers/tree/master/PoshCiphers
 
 Rot47 Decryptor - Copyright (c) @ BornToBeRoot
-User: https://github.com/BornToBeRoot
-Link: https://github.com/BornToBeRoot/PowerShell
+ - User: https://github.com/BornToBeRoot
+ - Link: https://github.com/BornToBeRoot/PowerShell
 
 # Copyright (c) 2021 @ Byrch Baker
