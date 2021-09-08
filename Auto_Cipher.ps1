@@ -1,4 +1,4 @@
-﻿<#
+<#
   - You enter encoded text, this will find the answer
   - This script will not work with multiple layers of encryption. not yet atleast >:)
   - The functions may say cipher when really not a cipher, i blame my ocd
@@ -12,6 +12,7 @@ $englishDictionary = (Invoke-WebRequest -uri "https://raw.githubusercontent.com/
 $encoded = Read-Host "Enter your encrypted text"
 # In the future, you will not need a key >:) 
 $key = Read-Host "Enter key, if you don't have key"
+
 
 function Ceasar_Cipher() {
 
@@ -1245,6 +1246,7 @@ Process{
         } 
     
         $ResultText
+        
     }
 }
 
@@ -1253,7 +1255,7 @@ End{
 }
         }
 
-        Convert-Rot47 -Text $encoded -Decrypt
+       Convert-Rot47 -Text $encoded -Decrypt
 }
 
 function A1Z26_Cipher() {
@@ -1573,26 +1575,35 @@ Atbash_Cipher
 Vigenere_Cipher
 }
 
-$ErrorActionPreference = "SilentlyContinue"
+
 $plaintext = All_Cipher
 
 # Auto Solve functionality 
 
-$plaintext | ForEach-Object {
+$plaintext = $plaintext | ForEach-Object {
 $isEnglish = $null
 $_.split(" ") | Foreach {
-if ($englishDictionary -match $_) {
+if ($englishDictionary -match "$_*") {
 $isEnglish += "True`n" 
 } else {
 $isEnglish += "False`n"
 }
 }
 if ($isEnglish -notmatch "False") {
-$_
+return $_
 break
 } 
 }
 
+$plaintext.Trim() | ForEach-Object {
+if ($_ -eq "") {
+
+} else {
+
+WRite-Host "BEST MATCH: $_"
+
+}
+}
 
 <#
 
