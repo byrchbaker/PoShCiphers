@@ -1,7 +1,10 @@
 # User enters the encrypted caesar cipher text
+# The longer the text is, the better matches you will get.
 $encoded = Read-Host "Enter caesar cipher"
+# Load the English Dictionary
+$englishDictionary = (Invoke-WebRequest -uri "https://raw.githubusercontent.com/dwyl/english-words/master/words.txt").Content 
 # Starts a foreach loop from 0-26 -> Number of letters in alphabet 
-foreach ($shift in $(26..0)) {
+$plaintext = foreach ($shift in $(26..0)) {
 # Makes a array (list) of all the letters in the alphabet
 $regularAlphabet = 97..(97+25) | % { [char]$_ }
 # Starts the get shift algorithm.
@@ -68,7 +71,33 @@ $plaintext += $_
 }
 # Print attempted decrypted string
 $plaintext
-
-
-
 }
+
+$plaintext = $plaintext | ForEach-Object {
+  $isEnglish = $null
+  $_.split(" ") | ForEach-Object {
+  if ($englishDictionary -match "$_*") {
+  $isEnglish += "True`n" 
+  } else {
+  $isEnglish += "False`n"
+  }
+  }
+  if ($isEnglish -notmatch "False") {
+  return $_
+  break
+  } 
+  }
+  
+  $BestMatches = $plaintext.Trim() | ForEach-Object {
+  if ($_ -eq "") {
+  
+  } else {
+  
+  "BEST MATCH: $_"
+  
+  }
+  }
+  
+  $BestMatches | Get-Unique | ForEach-Object {
+  Write-Host "$_" -ForegroundColor Green
+  }
