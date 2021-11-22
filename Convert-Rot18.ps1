@@ -1,4 +1,5 @@
-﻿$ROT5array = @{
+$encoded = Read-Host "Enter Rot18 encoded:"
+$ROT5array = @{
 "1" = "6"
 "2" = "7"
 "3" = "8"
