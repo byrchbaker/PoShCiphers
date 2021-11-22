@@ -1,4 +1,4 @@
-﻿[string]$binary = Read-Host "Enter encoded binary text"
+[string]$binary = Read-Host "Enter encoded binary text"
 
 [string]$binary = "$binary"
 $ErrorActionPreference = "SilentlyContinue"
