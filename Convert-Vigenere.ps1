@@ -1,4 +1,4 @@
-﻿$encoded = Read-Host "Enter vigenere cipher"
+$encoded = Read-Host "Enter vigenere cipher"
 $key = Read-Host "Enter vigenere cipher key" 
 
 # All Credit for the vigenere cipher decryption goes to @StackCrash (Github) PoshCipher repository
