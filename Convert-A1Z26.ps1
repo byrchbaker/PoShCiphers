@@ -1,4 +1,5 @@
-﻿$encoded = Read-Host "Enter A1Z26 text"
+# Convert A1Z26 with Powershell
+$encoded = Read-Host "Enter A1Z26 text"
 
 $A1Z26 = @{
 "1" = "a"
