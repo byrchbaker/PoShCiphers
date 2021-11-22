@@ -1,7 +1,7 @@
 ﻿<#
   - You enter encoded text, this will find the answer
   - This script will not work with multiple layers of encryption. not yet atleast >:)
-  - The functions may say cipher when really not a cipher, i blame my ocd
+  - The functions may say cipher when really not a cipher
   - When you find the way to see if a string matches a dictionary or is english, add it to the CEASAR CIPHER AND ROT47 (change the rot47
   - The Vigenere Cipher automatic key is coming soon. I am currently working on an algorithm. 
 #>
