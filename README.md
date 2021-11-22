@@ -33,5 +33,4 @@ Rot47 Decryptor - Copyright (c) @ BornToBeRoot
 Please excuse anything unprofessional since this is a side project.
 
 # Copyright (c) 2021 @ Byrch Baker
-(In most parts)
 
