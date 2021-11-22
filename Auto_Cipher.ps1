@@ -83,16 +83,7 @@ $asciiText -join "`n"
 }
 
 function Base64_Cipher() {
-$Base64Encoded = $encoded
-$Base64Encoded > ~\Desktop\Encoded.b64
-cmd.exe /c "certutil -decode %userprofile%\Desktop\Encoded.b64 %userprofile%\Desktop\Decode.txt" | Out-Null
-$Base64Decoded = Get-Content ~\Desktop\Decode.txt
-$Base64Decoded
-Remove-Item -path ~\Desktop\Encoded.b64 -Force
-Remove-Item -path ~\Desktop\Decode.txt -Force
-
-
-
+System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($encoded))
 }
 
 function MorseCode_Cipher() {
