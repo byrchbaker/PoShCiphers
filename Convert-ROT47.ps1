@@ -1,4 +1,4 @@
-﻿###############################################################################################################
+###############################################################################################################
 # CREDIT::::::::::
 # Language     :  PowerShell 4.0
 # Filename     :  Convert-ROT47.ps1
@@ -7,7 +7,7 @@
 # Repository   :  https://github.com/BornToBeRoot/PowerShell
 ###############################################################################################################
 
-
+$encoded = Read-Host "Enter encoded Rot47:"
 function Convert-Rot47() {
 
 
@@ -149,4 +149,4 @@ End{
 }
         }
 
-        Convert-Rot47 -Text "%9:D :D 2 E6DE >6DD286P" -Decrypt
+        Convert-Rot47 -Text "$encoded" -Decrypt
